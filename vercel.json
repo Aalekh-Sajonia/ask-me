@@ -1,13 +1,13 @@
 {
     "builds": [{
-        "src": "assistant/assistant_app/wsgi.py",
+        "src": "assistant/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "assistant/assistant_app/wsgi.py"
+            "dest": "assistant/wsgi.py"
         }
     ]
 }
