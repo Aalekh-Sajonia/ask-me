@@ -156,4 +156,4 @@ class InitAssistant(APIView):
             return Response({"Status": "Success", "session_uid": session_uid},status=status.HTTP_200_OK)
         except Exception as e:
             print("e", e)
-            return Response({"status": "Something went wrong" + e}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({"status": e}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
